@@ -1,0 +1,46 @@
+// ----------------------------------------------------------
+// base form elements
+// ----------------------------------------------------------
+
+//defined in mixins partials
+#{$all-text-inputs}{
+  width: 100%;
+  border: 1px solid $goldLight;
+  margin-bottom: .5rem;
+  padding: .5rem;
+  transition: border-color $transition;
+  border-radius: 0;
+  -webkit-appearance: none;
+  &:focus {
+    border-color: $gold;
+    outline: none;
+  }
+}
+
+textarea {}
+
+label {
+  display: block;
+}
+
+select {}
+
+button,
+input[type="submit"] {
+  -webkit-appearance: none;
+  border: 1px solid $goldLight;
+  background-color: $gold;
+  color: $white;
+  padding: .25rem .75rem;
+  line-height: 1;
+  height: 35px;
+  vertical-align: top;
+  border-radius: 9px;
+  font-size: 1em;
+  &:hover {
+    border-color: $gold;
+    background-color: $goldLight;
+    color: $gold;
+    outline: none;
+  }
+}

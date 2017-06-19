@@ -1,0 +1,64 @@
+// ----------------------------------------------------------
+// site footer
+// ----------------------------------------------------------
+
+.site-footer {
+  background-color: $brown;
+  @include clearfix;
+  padding: 0 0 1rem;
+  overflow: hidden;
+}
+
+.footer-left-col {
+  padding: 1rem 0 0 0;
+  @include breakpoint($tablet){
+    @include span(6);
+  }
+}
+
+.footer-right-col {
+  padding: 1rem 0 0 0;
+
+  @include breakpoint($tablet){
+    @include span(last 6);
+    padding: 10rem 0 0;
+  }
+}
+
+.footer-logo {
+  display: block;
+  width: 586px;
+  opacity: 0.2;
+  position: absolute;
+  left: -11rem;
+  top: -16rem;
+}
+
+.social-icons {
+  @include breakpoint($tablet){
+    text-align: right;
+  }
+}
+
+.social-icon {
+  fill: $white;
+  display: inline-block;
+  margin: 0 0.4rem;
+  width: 1.5rem;
+
+  &:link, &:visited{
+    color: $white;
+  }
+  &:hover, &:active{
+    
+  }
+}
+
+.copyright {
+  color: $white;
+  opacity: 0.42;
+  font-size: 0.8rem;
+  @include breakpoint($tablet){
+    text-align: right;
+  }
+}

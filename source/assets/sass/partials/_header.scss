@@ -1,0 +1,122 @@
+// ----------------------------------------------------------
+// site header
+// ----------------------------------------------------------
+
+.header{
+  @include clearfix;
+  background-color: $white;
+  background: url('../images/canyon-bkgd.jpg') no-repeat;
+  background-size: cover;
+}
+
+.nav-bar {
+  background-color: rgba(0,0,0, 0.4);
+  margin: 0 0 2rem;
+  padding: 0;
+}
+
+.main-nav {
+  margin: 0;
+  text-align: right;
+  clear: both;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height $transition; 
+  
+  &.visible {
+    max-height: 200px;
+    margin: 0 0 1.2rem;
+  }
+
+  @include breakpoint($tablet){
+    clear: none;
+    display: block;
+    max-height: none;
+    margin: 1.2rem 0 1.2rem;
+    padding: 0;
+  }
+
+  .main-nav-item{
+    margin: 0;
+    list-style-type: none;
+    
+    @include breakpoint($tablet){
+      margin: 0 1rem 0;
+      display: inline-block;
+    }  
+  }
+
+  a {
+    text-transform: uppercase;
+    &:link, &:visited{
+      color: $white;
+      text-decoration: none;
+    }
+    &:hover, &:active{
+      color: $gold;
+      text-decoration: none;
+    }
+  }
+}
+
+.bar {
+  display: block;
+  height: 5px;
+  width: 50px;
+  background: $white;
+  margin: 10px auto;
+}
+ 
+.hamburger {
+  display: block;
+  float: right;
+  width: 50px;
+  margin: 2rem 0;
+
+  @include breakpoint($tablet){
+    display: none; 
+  }
+
+  &:hover, &:active {
+    .bar {
+      background: $gold;
+    }
+  }
+}
+
+.middle {
+  margin: 0 auto;
+}
+ 
+.bar {
+  transition: all $transition;
+}
+ 
+.hamburger.open .top {
+  -webkit-transform: translateY(15px) rotateZ(45deg);
+  -moz-transform: translateY(15px) rotateZ(45deg);
+  -ms-transform: translateY(15px) rotateZ(45deg);
+  -o-transform: translateY(15px) rotateZ(45deg);
+  transform: translateY(15px) rotateZ(45deg);
+}
+
+.hamburger.open .bottom {
+  -webkit-transform: translateY(-15px) rotateZ(-45deg);
+  -moz-transform: translateY(-15px) rotateZ(-45deg);
+  -ms-transform: translateY(-15px) rotateZ(-45deg);
+  -o-transform: translateY(-15px) rotateZ(-45deg);
+  transform: translateY(-15px) rotateZ(-45deg);
+}
+.hamburger.open .middle {
+  width: 0;
+}
+
+.header-logo-col {
+  margin: 0 auto 2rem auto;
+  max-width: 300px;
+
+  @include breakpoint($tablet) {
+    @include span(4 of 12);
+    max-width: none;
+  }
+}

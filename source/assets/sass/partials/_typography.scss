@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Raleway');
+
+@mixin fontHeadline {
+  font-family:"Playfair Display", Georgia, Times, serif;
+}
+
+@mixin fontBody {
+  font-family:"Raleway", Helvetica, Arial, sans-serif;
+}
+
+html {
+  font-size: 16px;
+  @include fontBody;
+  line-height: 1.67;
+  color: $text;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6, {
+  @include fontHeadline;
+  font-weight: bold;
+}
+
+h1 {
+  margin: 1rem 0 0.8em;
+  border-bottom: 1px solid $brown;
+  font-size: 3.75rem;
+  font-weight: normal;
+  color: $brown;
+  line-height: 1.24em;
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin: 0 0 1.24rem;
+  font-weight: normal;
+  color: $brown;
+  line-height: 1.24em;
+}
+
+h3 {
+  font-size: 1.9rem;
+  color: $brown;
+  margin: 0 0 1.24rem;
+  line-height: 1.24em;
+}
+
+h4 {
+  color: $brown;
+  margin: 0 0 1.24rem;
+  line-height: 1.24em;
+}
+
+h5 {
+  color: $brown;
+  margin: 0 0 1.24rem;
+  line-height: 1.24em;
+}
+
+h6 {
+  color: $brown;
+  margin: 0 0 1.24rem;
+  line-height: 1.24em;
+}
+
+ul,
+ol {
+  margin: 0 0 1.24rem;
+}
+
+li {}
+
+a {
+  &:link, &:visited {
+    color: $link;
+    transition: color $transition;
+  }
+  &:hover, &:active {
+    color: $linkHover;
+    text-decoration: underline;
+  }
+}
+
+p {
+  margin: 0 0 2em;
+}
+
+small {}
+
+strong {}
+
+sup {}
+
+hr {
+  border: none;
+  border-top: 1px dashed $black;
+  margin: 1.2rem 0 1.2rem;
+  height: 0;
+}
+
